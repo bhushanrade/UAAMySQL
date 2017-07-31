@@ -1,0 +1,26 @@
+---
+ applications:
+ - name: myuaa2017
+   memory: 1024M
+   instances: 1
+   host: myuaa2017
+   path: C:\Users\a622880\UAA\uaa-3.14.0\uaa\build\libs\cloudfoundry-identity-uaa-3.14.0.war
+   env:
+     JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '[enabled: true]'
+     JBP_CONFIG_TOMCAT: '{tomcat: { version: 8.0.+ }}'
+     SPRING_PROFILES_ACTIVE: mysql,default     
+     UAA_CONFIG_YAML: |
+       uaa.url: http://myuaa2017.apps.eu01.cf.canopy-cloud.com
+       login.url: http://myuaa2017.apps.eu01.cf.canopy-cloud.com
+       smtp:
+         host: mail.server.host
+         port: 3535
+ buildpack: java_buildpack
+ 
+ services:
+ - uisamysql
+
+ 
+ 
+   
+ 

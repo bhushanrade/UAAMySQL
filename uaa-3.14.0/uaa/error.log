@@ -1,0 +1,3 @@
+FAILED
+Error dialing trafficcontroller server: dial tcp 52.6.165.151:443: connectex: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond..
+Please ask your Cloud Foundry Operator to check the platform configuration (trafficcontroller is wss://doppler.sys.eu01.cf.canopy-cloud.com:443).
